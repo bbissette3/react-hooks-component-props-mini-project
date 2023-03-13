@@ -1,8 +1,8 @@
 import Article from "./Article";
 
-function ArticleList(posts) {
-    const post = posts.posts.map((post) => (
-        <Article key={post.id} title={post.title} date={post.date} preview={post.preview} /> 
+function ArticleList(props) {
+    const post = props.posts.map((post) => (
+        <Article key={post.id} { ...post } /> 
     ))
 
     return (
